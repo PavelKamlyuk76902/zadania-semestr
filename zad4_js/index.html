@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="pl">
+<!-- Student ID: 76902 - Pavel Kamlyuk -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Imię Nazwisko</title>
-    <link rel="stylesheet" href="greencss.css">
+    <title>CV - Pavel Kamlyuk [76902]</title>
+    <!-- Arkusz stylów z id dla JS - student 76902 -->
+    <link rel="stylesheet" href="red.css" id="theme-css">
 </head>
 <body>
     <header>
-        
-        <h1>Pavel Kamlyuk</h1> 
-        
-        <img src="image.png" alt="Zdjęcie profilowe Pavel Kamlyuk">
+        <h1>Pavel Kamlyuk [76902]</h1>
+        <img src="image.png" alt="Zdjęcie profilowe Pavel Kamlyuk 76902">
     </header>
+
+    <!-- Przyciski sterujące - wymagane do zadania 4 [76902] -->
+    <div style="text-align: center; margin: 20px 0; padding: 10px; background: #f0f0f0;">
+        <button id="theme-toggle" style="padding: 10px 20px; margin: 5px; cursor: pointer; font-size: 14px;">
+            🟢 Włącz motyw zielony [76902]
+        </button>
+        <button id="toggle-section" style="padding: 10px 20px; margin: 5px; cursor: pointer; font-size: 14px;">
+            🙈 Ukryj sekcję Projekty [76902]
+        </button>
+    </div>
 
     <main>
         <section id="kontakt">
@@ -20,22 +30,19 @@
             <p>Email: <a href="mailto:pkamlyu1@stu.vistula.edu.pl">pkamlyu1@stu.vistula.edu.pl</a></p>
             <p>Telefon: <a href="tel:+48573255100">+48 573 255 100</a></p>
             <p>Miasto: Warszawa</p>
-            
-            
-            <p>GitHub: <a href="https://github.com/PavelKamlyuk76902" target="_blank" rel="noopener noreferrer">Mój GitHub</a></p>
+            <p>GitHub: <a href="https://github.com/PavelKamlyuk76902" target="_blank" rel="noopener noreferrer">Mój GitHub [76902]</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/pavel-kamlyuk-03a5553b9/" target="_blank" rel="noopener noreferrer">Mój LinkedIn</a></p>
         </section>
 
         <section id="o-mnie">
             <h2>O mnie</h2>
-            <p>Jestem studentem, i uczę się tworzyć strony WWW.</p>
+            <p>Jestem studentem (ID: 76902) i uczę się tworzyć strony WWW.</p>
         </section>
 
         <section id="umiejetnosci">
             <h2>Umiejętności</h2>
-            
             <ul>
-                <li>doing CV</li>
+                <li>HTML/CSS/JS</li>
                 <li>C#</li>
                 <li>Podstawy Python</li>
                 <li>Obsługa komputera</li>
@@ -45,9 +52,8 @@
 
         <section id="doswiadczenie">
             <h2>Doświadczenie</h2>
-            
             <article>
-                <h3>Praktyki w Restauracjah</h3>
+                <h3>Praktyki w Restauracjach</h3>
                 <p>2025 - 2026</p>
                 <p>Pomoc w administracji.</p>
             </article>
@@ -60,21 +66,24 @@
 
         <section id="edukacja">
             <h2>Edukacja</h2>
-            <p>Vistla - Kierunek Informatyki </p>
+            <p>Vistula - Kierunek Informatyki [76902]</p>
         </section>
 
+        <!-- Sekcja do ukrywania/pokazywania - id="projekty" -->
         <section id="projekty">
             <h2>Projekty</h2>
-            
             <ul>
-                <li>Strona CV </li>
-                <li>Analizator na c#</li>
+                <li>Strona CV [76902]</li>
+                <li>Analizator na C#</li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Pavel Kamlyuk</p>
+        <p>&copy; 2026 Pavel Kamlyuk - student 76902</p>
     </footer>
+
+    <!-- Podłączenie JavaScript - student 76902 -->
+    <script src="script.js"></script>
 </body>
 </html>
