@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<!-- Student ID: 76902 - Pavel Kamlyuk -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Pavel Kamlyuk [76902]</title>
+    <link rel="stylesheet" href="redcss.css" id="theme-css">
+</head>
+<body>
+    <header>
+        <h1>Pavel Kamlyuk [76902]</h1>
+        <img src="image.png" alt="Zdjęcie profilowe Pavel Kamlyuk 76902">
+    </header>
+
+    <!-- Przyciski sterujące - Zadanie 4 [76902] -->
+    <div style="text-align: center; margin: 20px 0; padding: 10px; background: #f0f0f0;">
+        <button id="theme-toggle" style="padding: 10px 20px; margin: 5px; cursor: pointer; font-size: 14px;">
+            🟢 Włącz motyw zielony [76902]
+        </button>
+        <button id="toggle-section" style="padding: 10px 20px; margin: 5px; cursor: pointer; font-size: 14px;">
+            🙈 Ukryj sekcję Projekty [76902]
+        </button>
+    </div>
+
+    <main>
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <p>Email: <a href="mailto:pkamlyu1@stu.vistula.edu.pl">pkamlyu1@stu.vistula.edu.pl</a></p>
+            <p>Telefon: <a href="tel:+48573255100">+48 573 255 100</a></p>
+            <p>Miasto: Warszawa</p>
+            <p>GitHub: <a href="https://github.com/PavelKamlyuk76902" target="_blank" rel="noopener noreferrer">Mój GitHub [76902]</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/pavel-kamlyuk-03a5553b9/" target="_blank" rel="noopener noreferrer">Mój LinkedIn</a></p>
+        </section>
+
+        <section id="o-mnie">
+            <h2>O mnie</h2>
+            <p>Jestem studentem (ID: 76902) i uczę się tworzyć strony WWW.</p>
+        </section>
+
+        <section id="umiejetnosci">
+            <h2>Umiejętności</h2>
+            <ul>
+                <li>HTML/CSS/JS</li>
+                <li>C#</li>
+                <li>Podstawy Python</li>
+                <li>Obsługa komputera</li>
+                <li>Język angielski</li>
+            </ul>
+        </section>
+
+        <section id="doswiadczenie">
+            <h2>Doświadczenie</h2>
+            <article>
+                <h3>Praktyki w Restauracjach</h3>
+                <p>2025 - 2026</p>
+                <p>Pomoc w administracji.</p>
+            </article>
+            <article>
+                <h3>Wolontariat</h3>
+                <p>2022</p>
+                <p>Pomoc w organizacji wydarzeń.</p>
+            </article>
+        </section>
+
+        <section id="edukacja">
+            <h2>Edukacja</h2>
+            <p>Vistula - Kierunek Informatyki [76902]</p>
+        </section>
+
+        <section id="projekty">
+            <h2>Projekty</h2>
+            <ul>
+                <li>Strona CV [76902]</li>
+                <li>Analizator na C#</li>
+            </ul>
+        </section>
+
+        <!-- FORMULARZ - Zadanie 5 [76902] -->
+        <section id="formularz">
+            <h2>Formularz kontaktowy [76902]</h2>
+            <form id="kontaktForm" novalidate>
+                <div class="form-group">
+                    <label for="imie">Imię: *</label>
+                    <input type="text" id="imie" name="imie" placeholder="Wprowadź imię">
+                    <span class="error" id="imieError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="nazwisko">Nazwisko: *</label>
+                    <input type="text" id="nazwisko" name="nazwisko" placeholder="Wprowadź nazwisko">
+                    <span class="error" id="nazwiskoError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail: *</label>
+                    <input type="text" id="email" name="email" placeholder="np. jan@example.com">
+                    <span class="error" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="wiadomosc">Wiadomość: *</label>
+                    <textarea id="wiadomosc" name="wiadomosc" rows="5" placeholder="Wprowadź wiadomość"></textarea>
+                    <span class="error" id="wiadomoscError"></span>
+                </div>
+
+                <button type="submit">Wyślij wiadomość</button>
+                
+                <div id="successMessage" class="success" style="display: none;">
+                    ✅ Formularz został poprawnie wypełniony! [76902]
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pavel Kamlyuk - student 76902</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
