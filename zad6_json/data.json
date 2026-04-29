@@ -1,0 +1,35 @@
+{
+  "student": {
+    "imie": "Pavel",
+    "nazwisko": "Kamlyuk",
+    "id": "76902",
+    "email": "pkamlyu1@stu.vistula.edu.pl",
+    "telefon": "+48 573 255 100",
+    "miasto": "Warszawa"
+  },
+  "umiejetnosci": [
+    "HTML/CSS/JavaScript",
+    "C#",
+    "Python (podstawy)",
+    "Git/GitHub",
+    "JSON & Fetch API",
+    "Obsługa komputera"
+  ],
+  "projekty": [
+    "Strona CV [76902]",
+    "Analizator na C#",
+    "Dynamiczna strona z JSON"
+  ],
+  "doswiadczenie": [
+    {
+      "stanowisko": "Praktyki w Restauracjach",
+      "okres": "2025 - 2026",
+      "opis": "Pomoc w administracji"
+    },
+    {
+      "stanowisko": "Wolontariat",
+      "okres": "2022",
+      "opis": "Pomoc w organizacji wydarzeń"
+    }
+  ]
+}
