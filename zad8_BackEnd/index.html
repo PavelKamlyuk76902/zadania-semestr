@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Pavel Kamlyuk [76902]</title>
+    <link rel="stylesheet" href="redcss.css" id="theme-css">
+    <style>
+        /* Style dla formularza i zadań */
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 8px; border: 2px solid #ddd;
+            border-radius: 4px; box-sizing: border-box;
+        }
+        .error { color: #c41e3a; font-size: 13px; display: none; }
+        .success {
+            background: #d4edda; color: #155724; padding: 15px;
+            border-radius: 4px; margin-top: 15px; text-align: center;
+        }
+        #tasks {
+            background: white; padding: 20px; border-radius: 8px;
+            margin: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .task-input-group { display: flex; gap: 10px; margin-bottom: 15px; }
+        #taskInput { flex: 1; padding: 10px; border: 2px solid #ddd; border-radius: 4px; }
+        #addTaskBtn {
+            padding: 10px 20px; background: #667eea; color: white;
+            border: none; border-radius: 4px; cursor: pointer;
+        }
+        #tasksList { list-style: none; padding: 0; }
+        .task-item {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px; margin: 5px 0; background: #f8f9fa;
+            border-left: 4px solid #667eea; border-radius: 4px;
+        }
+        .delete-btn {
+            padding: 5px 12px; background: #dc3545; color: white;
+            border: none; border-radius: 4px; cursor: pointer; font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="student-name">Pavel Kamlyuk [76902]</h1>
+        <img src="image.png" alt="Zdjęcie profilowe Pavel Kamlyuk 76902">
+    </header>
+
+    <!-- Przyciski sterujące - Zadanie 4 -->
+    <div style="text-align: center; margin: 20px 0; padding: 10px; background: #f0f0f0;">
+        <button id="theme-toggle" style="padding: 10px 20px; margin: 5px; cursor: pointer;">
+            🟢 Włącz motyw zielony [76902]
+        </button>
+        <button id="toggle-section" style="padding: 10px 20px; margin: 5px; cursor: pointer;">
+            🙈 Ukryj sekcję Projekty [76902]
+        </button>
+    </div>
+
+    <main>
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <p>Email: <a href="mailto:pkamlyu1@stu.vistula.edu.pl">pkamlyu1@stu.vistula.edu.pl</a></p>
+            <p>Telefon: <a href="tel:+48573255100">+48 573 255 100</a></p>
+            <p>Miasto: Warszawa</p>
+            <p>GitHub: <a href="https://github.com/PavelKamlyuk76902" target="_blank">Mój GitHub [76902]</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/pavel-kamlyuk-03a5553b9/" target="_blank">Mój LinkedIn</a></p>
+        </section>
+
+        <section id="o-mnie">
+            <h2>O mnie</h2>
+            <p>Jestem studentem (ID: 76902) i uczę się tworzyć strony WWW.</p>
+        </section>
+
+        <section id="umiejetnosci">
+            <h2>Umiejętności</h2>
+            <ul>
+                <li>HTML/CSS/JS</li>
+                <li>C#</li>
+                <li>Podstawy Python</li>
+                <li>Obsługa komputera</li>
+                <li>Język angielski</li>
+            </ul>
+        </section>
+
+        <section id="doswiadczenie">
+            <h2>Doświadczenie</h2>
+            <article>
+                <h3>Praktyki w Restauracjach</h3>
+                <p>2025 - 2026</p>
+                <p>Pomoc w administracji.</p>
+            </article>
+            <article>
+                <h3>Wolontariat</h3>
+                <p>2022</p>
+                <p>Pomoc w organizacji wydarzeń.</p>
+            </article>
+        </section>
+
+        <section id="edukacja">
+            <h2>Edukacja</h2>
+            <p>Vistula - Kierunek Informatyki [76902]</p>
+        </section>
+
+        <section id="projekty">
+            <h2>Projekty</h2>
+            <ul>
+                <li>Strona CV [76902]</li>
+                <li>Analizator na C#</li>
+            </ul>
+        </section>
+
+        <!-- Formularz kontaktowy - Zadanie 5 + 8 -->
+        <section id="formularz">
+            <h2>Formularz kontaktowy [76902]</h2>
+            <form id="kontaktForm">
+                <div class="form-group">
+                    <label for="imie">Imię: *</label>
+                    <input type="text" id="imie" name="imie" placeholder="Wprowadź imię" required>
+                    <span class="error" id="imieError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="nazwisko">Nazwisko: *</label>
+                    <input type="text" id="nazwisko" name="nazwisko" placeholder="Wprowadź nazwisko" required>
+                    <span class="error" id="nazwiskoError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail: *</label>
+                    <input type="email" id="email" name="email" placeholder="np. jan@example.com" required>
+                    <span class="error" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="wiadomosc">Wiadomość: *</label>
+                    <textarea id="wiadomosc" name="wiadomosc" rows="5" placeholder="Wprowadź wiadomość" required></textarea>
+                    <span class="error" id="wiadomoscError"></span>
+                </div>
+                <button type="submit" style="width: 100%; padding: 12px; background: #2e8b57; color: white; 
+                           border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">
+                    Wyślij wiadomość
+                </button>
+                <div id="successMessage" class="success" style="display: none;">
+                    ✅ Wiadomość wysłana na serwer! [76902]
+                </div>
+            </form>
+        </section>
+
+        <!-- ✅ ZADANIE 7 - Local Storage (Moje Zadania) -->
+        <section id="tasks">
+            <h2>Moje Zadania [76902]</h2>
+            <div class="task-input-group">
+                <input type="text" id="taskInput" placeholder="Wprowadź nowe zadanie...">
+                <button id="addTaskBtn" onclick="addTask()">Dodaj zadanie</button>
+            </div>
+            <ul id="tasksList"></ul>
+            <p id="tasksCount" style="margin-top: 10px; color: #666; font-size: 14px;">
+                Liczba zadań: 0
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pavel Kamlyuk - student 76902</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- ZADANIE 8 - Firebase Backend -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDnASoXOoMtnnnA9c0HhVhnsyMpW-lD1I8",
+            authDomain: "cv-76902.firebaseapp.com",
+            projectId: "cv-76902",
+            storageBucket: "cv-76902.firebasestorage.app",
+            messagingSenderId: "324533997402",
+            appId: "1:324533997402:web:beb91714eb6357f18ded63",
+            measurementId: "G-P61E25NH7S"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        const form = document.getElementById('kontaktForm');
+        if (form) {
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    imie: document.getElementById('imie').value,
+                    nazwisko: document.getElementById('nazwisko').value,
+                    email: document.getElementById('email').value,
+                    wiadomosc: document.getElementById('wiadomosc').value,
+                    studentId: '76902',
+                    dataWyslania: new Date().toISOString()
+                };
+                
+                try {
+                    const docRef = await addDoc(collection(db, "formularz_cv"), formData);
+                    console.log('✅ Dane wysłane na serwer! ID:', docRef.id);
+                    alert('✅ Wiadomość wysłana na backend!\nID: ' + docRef.id);
+                    form.reset();
+                } catch (error) {
+                    console.error('❌ Błąd Firebase:', error);
+                    alert('❌ Błąd: ' + error.message);
+                }
+            });
+        }
+        console.log('🔥 Firebase podłączony - student 76902');
+    </script>
+    
+    <!-- ZADANIE 7 - Local Storage Script -->
+    <script>
+        // LocalStorage - Zadania
+        function getTasksFromStorage() {
+            const tasksJSON = localStorage.getItem('tasks_76902');
+            return tasksJSON ? JSON.parse(tasksJSON) : [];
+        }
+
+        function displayTasks() {
+            const tasksList = document.getElementById('tasksList');
+            const tasksCount = document.getElementById('tasksCount');
+            const tasks = getTasksFromStorage();
+            
+            if (!tasksList) return;
+            
+            tasksList.innerHTML = '';
+            tasks.forEach(task => {
+                const li = document.createElement('li');
+                li.className = 'task-item';
+                li.innerHTML = `
+                    <span class="task-text">${task.text}</span>
+                    <span class="task-date">${task.date}</span>
+                    <button class="delete-btn" onclick="deleteTask(${task.id})">Usuń</button>
+                `;
+                tasksList.appendChild(li);
+            });
+            
+            if (tasksCount) {
+                tasksCount.textContent = `Liczba zadań: ${tasks.length}`;
+            }
+        }
+
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskText = taskInput ? taskInput.value.trim() : '';
+            
+            if (!taskText) {
+                alert('Wprowadź treść zadania! [76902]');
+                return;
+            }
+            
+            const tasks = getTasksFromStorage();
+            tasks.push({
+                id: Date.now(),
+                text: taskText,
+                date: new Date().toLocaleDateString('pl-PL')
+            });
+            
+            localStorage.setItem('tasks_76902', JSON.stringify(tasks));
+            
+            if (taskInput) taskInput.value = '';
+            displayTasks();
+            console.log('✅ Zadanie dodane - student 76902');
+        }
+
+        function deleteTask(taskId) {
+            let tasks = getTasksFromStorage();
+            tasks = tasks.filter(task => task.id !== taskId);
+            localStorage.setItem('tasks_76902', JSON.stringify(tasks));
+            displayTasks();
+            console.log('🗑️ Zadanie usunięte - student 76902');
+        }
+
+        // Enter w polu zadania
+        document.addEventListener('DOMContentLoaded', function() {
+            displayTasks();
+            const taskInput = document.getElementById('taskInput');
+            if (taskInput) {
+                taskInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') addTask();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

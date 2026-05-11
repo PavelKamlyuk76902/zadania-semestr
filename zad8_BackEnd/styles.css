@@ -1,0 +1,62 @@
+/* Student ID: 76902 - Style dla formularza i Local Storage */
+
+/* === ZADANIE 5 - Formularz === */
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+.form-group input[type="text"], .form-group textarea {
+    width: 100%; padding: 8px; border: 2px solid #ddd;
+    border-radius: 4px; font-size: 14px; box-sizing: border-box;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none; border-color: #2e8b57;
+}
+.error { color: #c41e3a; font-size: 13px; margin-top: 5px; display: none; }
+.success {
+    background-color: #d4edda; color: #155724; padding: 15px;
+    border-radius: 4px; margin-top: 20px; text-align: center;
+    border: 1px solid #c3e6cb;
+}
+form button[type="submit"] {
+    background-color: #2e8b57; color: white; padding: 12px 20px;
+    border: none; border-radius: 4px; cursor: pointer;
+    font-size: 16px; width: 100%;
+}
+form button[type="submit"]:hover { background-color: #257347; }
+
+/* === ZADANIE 7 - Local Storage === */
+#tasks {
+    background: white; padding: 20px; border-radius: 8px;
+    margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#tasks h2 {
+    color: #667eea; border-bottom: 2px solid #667eea;
+    padding-bottom: 10px; margin-bottom: 15px;
+}
+.task-input-group { display: flex; gap: 10px; margin-bottom: 15px; }
+#taskInput {
+    flex: 1; padding: 10px; border: 2px solid #ddd;
+    border-radius: 4px; font-size: 14px;
+}
+#taskInput:focus { outline: none; border-color: #667eea; }
+#addTaskBtn {
+    padding: 10px 20px; background: #667eea; color: white;
+    border: none; border-radius: 4px; cursor: pointer;
+    font-size: 14px; transition: background 0.3s;
+}
+#addTaskBtn:hover { background: #5568d3; }
+#tasksList { list-style: none; padding: 0; }
+.task-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px; margin-bottom: 8px; background: #f8f9fa;
+    border-left: 4px solid #667eea; border-radius: 4px;
+    transition: transform 0.2s;
+}
+.task-item:hover { transform: translateX(5px); background: #e9ecef; }
+.task-text { flex: 1; font-weight: 500; }
+.task-date { color: #999; font-size: 12px; margin: 0 10px; }
+.delete-btn {
+    padding: 5px 12px; background: #dc3545; color: white;
+    border: none; border-radius: 4px; cursor: pointer;
+    font-size: 12px; transition: background 0.3s;
+}
+.delete-btn:hover { background: #c82333; }
